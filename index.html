@@ -12,10 +12,14 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            animation: flashingBackground 2.5s infinite;
         }
 
-        @keyframes flashing {
+        @keyframes flashingBackground {
             0%, 100% {
                 background-color: #1a1a1a;
             }
@@ -33,57 +37,51 @@
             }
         }
 
-        body {
-            animation: flashing 3s infinite;
+        @keyframes flashingText {
+            0%, 100% {
+                color: #00aaff;
+            }
+            20% {
+                color: #ffcc00;
+            }
+            40% {
+                color: #ff5733;
+            }
+            60% {
+                color: #33ff57;
+            }
+            80% {
+                color: #ff33a1;
+            }
         }
 
         .container {
             max-width: 800px;
-            margin: auto;
             padding: 20px;
             background-color: rgba(42, 42, 42, 0.8);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
             border-radius: 10px;
-            margin-top: 50px;
-            border: 3px solid #00aaff;
-            position: relative;
-            z-index: 10;
+        }
+        h1, .message {
+            animation: flashingText 2.5s infinite;
         }
         h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
-            color: #00aaff;
         }
-        .video {
+        .gif {
             margin: 20px 0;
         }
         .message {
             margin-top: 20px;
             font-size: 1.2em;
-            color: #00aaff;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 1.2em;
-            margin-top: 20px;
-            background-color: #00aaff;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 5px;
-            box-shadow: 0 4px #0077aa;
-        }
-        .button:hover {
-            background-color: #0077aa;
-            color: #ffffff;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Despedida Soltero Moncada 2024 Oporto</h1>
-        <div class="video">
-            <iframe width="560" height="315" src="media/javiBreakDance.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="gif">
+            <img src="media/javiBreakDance-unscreen.gif"></img>
         </div>
         <div class="message">
             <p>Buy me a drink by sending me a Bizum to the number +34 123 456 789</p>
