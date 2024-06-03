@@ -16,7 +16,6 @@
             align-items: center;
             min-height: 100vh;
             background-color: #1a1a1a;
-            overflow: hidden;
             animation: flashingBackground 2.5s infinite;
         }
 
@@ -63,8 +62,6 @@
             background-color: rgba(42, 42, 42, 0.8);
             border-radius: 10px;
             box-sizing: border-box;
-            overflow: hidden;
-            flex-shrink: 0;
         }
         h1, .message {
             animation: flashingText 2.5s infinite;
@@ -79,9 +76,9 @@
             align-items: center;
             margin: 20px 0;
         }
-        .gif img {
+        .gif video {
             max-width: 100%;
-            height: auto;
+            max-height: 300px; /* Limit the height of the video */
             border-radius: 10px;
         }
         .message {
@@ -97,12 +94,6 @@
                 font-size: 1.2em;
             }
         }
-
-        @media (max-height: 600px) {
-            .container {
-                height: auto;
-            }
-        }
     </style>
 </head>
 <body>
@@ -112,7 +103,7 @@
             <p>Buy me a drink by sending me a Bizum to the number +34 123 456 789</p>
         </div>
         <div class="gif">
-            <img src="media/javiBreakDance-unscreen.gif" alt="Break Dance GIF">
+            <video src="media/javiBreakDance.mp4" autoplay loop muted controls></video>
         </div>
     </div>
 </body>
