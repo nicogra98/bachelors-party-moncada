@@ -56,6 +56,7 @@
         }
 
         .container {
+            width: 90%;
             max-width: 800px;
             padding: 20px;
             background-color: rgba(42, 42, 42, 0.8);
@@ -65,15 +66,29 @@
             animation: flashingText 2.5s infinite;
         }
         h1 {
-            font-size: 2.5em;
+            font-size: 2em;
             margin-bottom: 20px;
         }
         .gif {
             margin: 20px 0;
         }
+        .gif img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
         .message {
             margin-top: 20px;
-            font-size: 1.2em;
+            font-size: 1em;
+        }
+
+        @media (min-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            .message {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
@@ -81,7 +96,7 @@
     <div class="container">
         <h1>Despedida Soltero Moncada 2024 Oporto</h1>
         <div class="gif">
-            <img src="media/javiBreakDance-unscreen.gif"></img>
+            <img src="media/javiBreakDance-unscreen.gif" alt="Break Dance GIF">
         </div>
         <div class="message">
             <p>Buy me a drink by sending me a Bizum to the number +34 123 456 789</p>
