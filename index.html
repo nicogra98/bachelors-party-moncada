@@ -9,21 +9,45 @@
         body {
             text-align: center;
             font-family: 'Roboto', sans-serif;
-            background-color: #1a1a1a;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            overflow: hidden;
             color: #ffffff;
         }
+
+        @keyframes flashing {
+            0%, 100% {
+                background-color: #1a1a1a;
+            }
+            20% {
+                background-color: #ff5733;
+            }
+            40% {
+                background-color: #33ff57;
+            }
+            60% {
+                background-color: #3357ff;
+            }
+            80% {
+                background-color: #ff33a1;
+            }
+        }
+
+        body {
+            animation: flashing 3s infinite;
+        }
+
         .container {
             max-width: 800px;
             margin: auto;
             padding: 20px;
-            background-color: #2a2a2a;
+            background-color: rgba(42, 42, 42, 0.8);
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
             border-radius: 10px;
             margin-top: 50px;
             border: 3px solid #00aaff;
+            position: relative;
+            z-index: 10;
         }
         h1 {
             font-size: 2.5em;
