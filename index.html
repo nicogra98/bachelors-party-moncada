@@ -77,9 +77,8 @@
             margin: 20px 0;
             cursor: pointer;
         }
-        .gif video {
+        .gif img {
             max-width: 100%;
-            max-height: 300px;
             border-radius: 10px;
         }
         .message {
@@ -104,20 +103,8 @@
             <p>Buy me a drink by sending me a Bizum to the number +34 123 456 789</p>
         </div>
         <div class="gif">
-            <video id="video" src="media/javiBreakDance.mp4" autoplay muted loop hidden></video>
             <img src="media/javiBreakDance-unscreen.gif" onclick="toggleSound()"></img>
         </div>
     </div>
-    <script>
-        var video = document.getElementById('video');
-        var soundEnabled = false;
-
-        function toggleSound() {
-            if (!soundEnabled) {
-                video.muted = false;
-                soundEnabled = true;
-            }
-        }
-    </script>
 </body>
 </html>
